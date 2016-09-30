@@ -8,18 +8,34 @@ $(document).ready(function() {
 	hangMan = new Words();
 	hangMan.word.push("apple", "unicorn", "pillow","green", "knight", "puppies", "jello", "funk", "camero");
 
+	 i = [Math.floor(Math.random()*hangMan.word.length)];
+
+	splitWord = hangMan.word[i].split("");
+
+	underscore = splitWord.map(function(word) {
+		return "_ "
+	});
+
+	$("#word").html(underscore);
+	console.log(splitWord);
+
 	$("#generate-word").click(function() {
 
 		 i = [Math.floor(Math.random()*hangMan.word.length)];
 
-		splitWord = hangMan.word[i].split("")
+		splitWord = hangMan.word[i].split("");
 
 		underscore = splitWord.map(function(word) {
 			return "_ "
-		})
+		});
 
 		$("#word").html(underscore);
 		console.log(splitWord);
+
+		$("#letter-list").empty();
+		$("#end").empty();
+		$("#guess").val("");
+		$("#nope").hide();
 
 	});
 
@@ -27,13 +43,11 @@ $(document).ready(function() {
 		
 		guess = $("#guess")[0].value;
 
-
 		if (splitWord.indexOf(guess) == -1){
-			$("#nope").html("nope");
+			$("#nope").html("incorrect");
 			$("#nope").show();
 			console.log("nope");
 		}
-		
 
 		while(splitWord.indexOf(guess) != -1) {
 			guessIndex = splitWord.indexOf(guess);
@@ -48,10 +62,10 @@ $(document).ready(function() {
 		hi = "_ "
 
 		if(underscore.indexOf(hi) == -1){
-			$("#nope").html("winner!");
-		}
+			$("#end").html("winner winner chicken dinner!");
+		};
 
-		$("#letter-list").html(guess);
+		$("#letter-list").append(guess + ",");
 
 	});
 

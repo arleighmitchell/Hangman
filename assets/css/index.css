@@ -3,14 +3,15 @@ body, html {
     height: 100%;
     font-family: courier;
     background-color: rosybrown;
+    color: darkgrey;
 }
 
 
 header {
     font-size: 150px;
     text-align: center;
-    color: white;
     padding: 250px;
+    color: wheat;
 }
 
 .parallax1 {
@@ -25,12 +26,12 @@ header {
 }
 
 .body {
-    padding: 150px;
+    padding: 50px;
     text-align: center;
     height: 400px;
-    background-color: black;
-    font-size: 50px;
-    
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 35px;
+    color: grey;  
 }
 
 .parallax2 {
@@ -46,6 +47,6 @@ header {
 
 .end {
     padding: 50px;
-    font-size: 50px;
-    color: white;
+    font-size: 70px;
+    color: wheat;
 }
