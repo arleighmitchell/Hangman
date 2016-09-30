@@ -6,11 +6,25 @@
 
 	<title>Hang-Man</title>
 
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+
 </head>
 
 <body>
+	
+	<div class="parallax1">
 
-	<div id="buttons" name="buttons">
+		<header>
+
+			<p>Hang-man</p>
+
+		</header>
+
+	</div>
+
+	<div class="body" id="buttons" name="buttons">
 		
 		<button type="button" name="generate-word" id="generate-word">Generate Word</button>
 
@@ -20,6 +34,14 @@
 		<input type="text" name="guess" id="guess">
 		
 		<button type="button" name="submit-guess" id="submit-guess">Guess</button>
+
+		<p id="letter-list" name="letter-list" value="text"></p>
+
+	</div>
+
+	<div class="parallax2">
+
+		<p class="end">winner, winner, chicken dinner</p>
 
 	</div>
 

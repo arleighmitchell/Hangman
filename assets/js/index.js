@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 	$("#submit-guess").click(function() {
 		
-		var guess = $("#guess")[0].value;
+		guess = $("#guess")[0].value;
 
 
 		if (splitWord.indexOf(guess) == -1){
@@ -50,6 +50,8 @@ $(document).ready(function() {
 		if(underscore.indexOf(hi) == -1){
 			$("#nope").html("winner!");
 		}
+
+		$("#letter-list").html(guess);
 
 	});
 
