@@ -5,7 +5,7 @@ $(document).ready(function() {
 		this.word = []
 	};
 
-	 hangMan = new Words();
+	hangMan = new Words();
 	hangMan.word.push("apple", "unicorn", "pillow","green", "knight", "puppies", "jello", "funk", "camero");
 
 	$("#generate-word").click(function() {
@@ -37,13 +37,19 @@ $(document).ready(function() {
 
 		while(splitWord.indexOf(guess) != -1) {
 			guessIndex = splitWord.indexOf(guess);
-			splitWord[guessIndex] = "-"
+			splitWord[guessIndex] = "- "
 			underscore[guessIndex] = guess
 			$("#nope").hide();
 		}
 
 		$("#word").html(underscore);
 		console.log(underscore);
+
+		hi = "_ "
+
+		if(underscore.indexOf(hi) == -1){
+			$("#nope").html("winner!");
+		}
 
 	});
 
