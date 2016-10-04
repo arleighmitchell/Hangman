@@ -49,6 +49,7 @@ $(document).ready(function() {
 		$("#hint").append("Hint: " + hint);
 		$("#hint").show();
 		$("#answer").hide();
+		$("#count").hide();
 
 		count = 0
 
@@ -71,7 +72,10 @@ $(document).ready(function() {
 			clickCount();
 		}
 
-		if (count > 3) {
+		$("#count").html("incorrect guesses:" + count)
+		$("#count").show();
+
+		if (count > 5) {
 			$("#word").hide();
 			$("#hint").hide();
 			$("#nope").html("SORRY, YOU LOSE.");
