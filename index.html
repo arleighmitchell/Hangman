@@ -25,23 +25,29 @@
 	</div>
 
 	<div class="body" id="buttons" name="buttons">
-		
-		<button type="button" name="generate-word" id="generate-word">New Word</button>
+		<div class="rules">
+			<li>Guess Letters to fill in blanks</li>
+			<li>limit 5 incorrect guesses</li>
+		</div>
+		<div class="buttons">
+			<button type="button" name="generate-word" id="generate-word">New Word</button>
+			<p id="hint" name="hint" value="text"> </p>
+			<p id="answer" name="answer" value="text"></p>
+			<p id="word" name="word" value="text"></p>
+			<p id="nope" name="nope" value="text"></p>
+			<label>Enter Letter</label>
+			<input type="text" name="guess" id="guess">
+			
+			<button type="button" name="submit-guess" id="submit-guess">Submit Guess</button>
 
-		<p id="word" name="word" value="text"></p>
-		<p id="nope" name="nope" value="text"></p>
-		<label>Enter letter</label>
-		<input type="text" name="guess" id="guess">
-		
-		<button type="button" name="submit-guess" id="submit-guess">Guess</button>
+			<p id="letter-list" name="letter-list" value="text"></p>
 
-		<p id="letter-list" name="letter-list" value="text"></p>
+			<p class="end" id="end"></p>
 
+		</div>
 	</div>
 
 	<div class="parallax2">
-
-		<p class="end" id="end"></p>
 
 	</div>
 
